@@ -1,0 +1,66 @@
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    height:100vh;
+    background: linear-gradient(45deg,#ff758c,#ff7eb3);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+    color:white;
+    z-index:2;
+}
+
+h1{
+    font-size:30px;
+    margin-bottom:20px;
+    animation: fadeIn 2s ease;
+}
+
+.msg{
+    font-size:10px;
+    margin-bottom:0px;
+    line-height:40px;
+    animation: fadeIn 3s ease;
+}
+
+.btn, button{
+    background:white;
+    color:#ff4e50;
+    padding:18px 35px;
+    font-size:22px;
+    border:none;
+    border-radius:40px;
+    text-decoration:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover, button:hover{
+    transform:scale(1.15);
+}
+
+/* floating hearts */
+
+.hearts::before{
+    content:"❤️ ";
+    position:absolute;
+    width:100%;
+    font-size:30px;
+    animation: float 10s linear infinite;
+    opacity:0.3;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh);}
+    100%{transform:translateY(-100vh);}
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
